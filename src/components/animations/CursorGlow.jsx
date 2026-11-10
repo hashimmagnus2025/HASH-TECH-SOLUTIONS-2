@@ -52,6 +52,6 @@ export default function CursorGlow() {
     };
   }, [reducedMotion]);
   return <div ref={glowRef} aria-hidden className="pointer-events-none fixed left-0 top-0 z-55 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 mix-blend-screen" style={{
-    background: "radial-gradient(circle, rgba(55,230,196,0.16), rgba(47,99,224,0.08) 45%, transparent 70%)"
+    background: "radial-gradient(circle, rgba(53,181,209,0.16), rgba(53,181,209,0.08) 45%, transparent 70%)"
   }} />;
 }

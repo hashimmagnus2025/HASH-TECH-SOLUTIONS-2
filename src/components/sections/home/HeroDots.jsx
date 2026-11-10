@@ -64,7 +64,7 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
       width: dot.size * 1.6,
       height: dot.size * 1.6,
       opacity: 0.6,
-      boxShadow: "0 0 8px 1.5px rgba(180,83,9,0.5)"
+      boxShadow: "0 0 8px 1.5px rgba(53,181,209,0.5)"
     }} />)}
     </div>;
 });

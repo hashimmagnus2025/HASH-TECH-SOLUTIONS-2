@@ -3,7 +3,7 @@
 /* ==========================================================================
    HASHTECH SOLUTIONS — DESIGN SYSTEM TOKENS
    Premium IT infrastructure & security brand language.
-   Warm off-white/paper surfaces, signal-amber accent used strategically,
+   Warm off-white/paper surfaces, turquoise-cyan accent used strategically,
    with a deliberate dark graphite panel (--color-ink-soft) reserved for
    the Footer and closing-CTA moments as the one dark contrast point.
    ========================================================================== */
@@ -41,14 +41,14 @@
   --color-fg-on-dark-subtle: #8f8b83;
   --color-line-on-dark: rgba(244, 241, 236, 0.14);
 
-  /* ---- Brand accents: signal amber (PREVIEW), used strategically ---- */
-  --color-primary: #b45309;
-  --color-primary-dim: #8a3f07;
-  --color-primary-bright: #d97706;
-  --color-accent: #b45309;
-  --color-accent-dim: #8a3f07;
-  --color-signal: #d97706;           /* conversion accent, used sparingly */
-  --color-signal-dim: #8a3f07;
+  /* ---- Brand accents: turquoise cyan, used strategically ---- */
+  --color-primary: #35b5d1;
+  --color-primary-dim: #1f7a91;
+  --color-primary-bright: #5cc6dd;
+  --color-accent: #35b5d1;
+  --color-accent-dim: #1f7a91;
+  --color-signal: #5cc6dd;           /* conversion accent, used sparingly */
+  --color-signal-dim: #1f7a91;
   --color-danger: #ef4458;
 
   /* ---- Radius ---- */
@@ -60,8 +60,8 @@
 
   /* ---- Shadows / glow ---- */
   --shadow-elevated: 0 24px 60px -24px rgba(5, 7, 13, 0.65);
-  --shadow-glow-primary: 0 0 0 1px rgba(47, 99, 224, 0.4), 0 20px 50px -12px rgba(47, 99, 224, 0.35);
-  --shadow-glow-accent: 0 0 0 1px rgba(55, 230, 196, 0.35), 0 20px 50px -12px rgba(55, 230, 196, 0.3);
+  --shadow-glow-primary: 0 0 0 1px rgba(53, 181, 209, 0.4), 0 20px 50px -12px rgba(53, 181, 209, 0.35);
+  --shadow-glow-accent: 0 0 0 1px rgba(53, 181, 209, 0.35), 0 20px 50px -12px rgba(53, 181, 209, 0.3);
 
   /* ---- Layout rhythm ---- */
   --container-max: 90rem;
