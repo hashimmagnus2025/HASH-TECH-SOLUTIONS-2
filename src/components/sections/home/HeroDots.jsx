@@ -142,13 +142,13 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
     innerRef.current = node;
     if (typeof ref === "function") ref(node);else if (ref) ref.current = node;
   }} aria-hidden className="pointer-events-none absolute inset-0">
-      {DOTS.map((dot, index) => <span key={index} data-dot className="absolute rounded-full bg-fg" style={{
+      {DOTS.map((dot, index) => <span key={index} data-dot className="absolute rounded-full bg-accent" style={{
       left: `${dot.x}%`,
       top: `${dot.y}%`,
-      width: dot.size,
-      height: dot.size,
-      opacity: 0.55,
-      boxShadow: "0 0 6px 1px rgba(245,247,251,0.45)"
+      width: dot.size * 1.6,
+      height: dot.size * 1.6,
+      opacity: 0.6,
+      boxShadow: "0 0 8px 1.5px rgba(243,107,53,0.5)"
     }} />)}
     </div>;
 });

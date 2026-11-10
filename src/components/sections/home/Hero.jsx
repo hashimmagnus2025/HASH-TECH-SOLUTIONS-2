@@ -6,6 +6,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import MagneticButton from "@/components/animations/MagneticButton";
+import HeroDots from "@/components/sections/home/HeroDots";
 import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { serviceCategories } from "@/data/service-categories";
@@ -25,6 +26,7 @@ export default function Hero() {
   const ruleRef = useRef(null);
   const subRowRef = useRef(null);
   const categoryRowRef = useRef(null);
+  const dotsRef = useRef(null);
   const reducedMotion = useReducedMotion();
 
   // ---- Entrance timeline + cursor-reactive characters (one effect: both need `split`) ----
@@ -41,6 +43,7 @@ export default function Hero() {
       const el = char;
       el.style.transition = "transform 0.25s ease-out, color 0.25s ease-out";
     });
+    const dots = dotsRef.current ? dotsRef.current.querySelectorAll("[data-dot]") : [];
     if (reducedMotion) {
       gsap.set(split.words, {
         yPercent: 0,
@@ -52,6 +55,9 @@ export default function Hero() {
       gsap.set([eyebrowRef.current, subRowRef.current, categoryRowRef.current], {
         opacity: 1,
         y: 0
+      });
+      gsap.set(dots, {
+        opacity: 0.6
       });
       return () => split.revert();
     }
@@ -75,6 +81,9 @@ export default function Hero() {
       opacity: 0,
       y: 12
     });
+    gsap.set(dots, {
+      opacity: 0
+    });
     const tl = gsap.timeline({
       defaults: {
         ease: "power3.out"
@@ -84,7 +93,11 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       duration: 0.5
-    }, 0).to(split.words, {
+    }, 0).to(dots, {
+      opacity: 0.6,
+      duration: 1.2,
+      stagger: 0.02
+    }, 0.1).to(split.words, {
       yPercent: 0,
       opacity: 1,
       duration: 0.85,
@@ -151,8 +164,9 @@ export default function Hero() {
     };
   }, [reducedMotion]);
   return <section ref={sectionRef} className="relative flex flex-col justify-center overflow-hidden py-20 sm:min-h-[92vh] sm:py-28 md:min-h-screen">
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(47,99,224,0.16),transparent_60%)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(243,107,53,0.1),transparent_60%)]" />
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.3] bg-[linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] bg-size-[64px_64px] mask-[linear-gradient(to_bottom,black,transparent_75%)]" />
+      <HeroDots ref={dotsRef} />
 
       <Container className="relative flex flex-col gap-6 sm:gap-10">
         <span ref={eyebrowRef} className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
