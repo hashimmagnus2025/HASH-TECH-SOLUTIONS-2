@@ -3,119 +3,34 @@
 import { forwardRef, useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-const DOTS = [{
-  x: 6,
-  y: 12,
-  size: 2
-}, {
-  x: 13,
-  y: 28,
-  size: 1.5
-}, {
-  x: 4,
-  y: 48,
-  size: 2.5
-}, {
-  x: 10,
-  y: 68,
-  size: 1.5
-}, {
-  x: 5,
-  y: 86,
-  size: 2
-}, {
-  x: 22,
-  y: 8,
-  size: 1.5
-}, {
-  x: 30,
-  y: 90,
-  size: 2
-}, {
-  x: 40,
-  y: 15,
-  size: 1.5
-}, {
-  x: 46,
-  y: 92,
-  size: 1.5
-}, {
-  x: 58,
-  y: 10,
-  size: 2
-}, {
-  x: 64,
-  y: 30,
-  size: 1.5
-}, {
-  x: 72,
-  y: 6,
-  size: 2.5
-}, {
-  x: 78,
-  y: 22,
-  size: 1.5
-}, {
-  x: 85,
-  y: 40,
-  size: 2
-}, {
-  x: 92,
-  y: 18,
-  size: 1.5
-}, {
-  x: 95,
-  y: 56,
-  size: 2.5
-}, {
-  x: 88,
-  y: 70,
-  size: 1.5
-}, {
-  x: 94,
-  y: 88,
-  size: 2
-}, {
-  x: 80,
-  y: 85,
-  size: 1.5
-}, {
-  x: 68,
-  y: 94,
-  size: 2
-}, {
-  x: 54,
-  y: 48,
-  size: 1.5
-}, {
-  x: 36,
-  y: 60,
-  size: 1.5
-}, {
-  x: 24,
-  y: 76,
-  size: 2
-}, {
-  x: 16,
-  y: 94,
-  size: 1.5
-}, {
-  x: 90,
-  y: 8,
-  size: 1.5
-}, {
-  x: 60,
-  y: 62,
-  size: 1.5
-}];
+// Deterministic PRNG (mulberry32) so the scatter is identical on server and
+// client render — Math.random() here would cause a hydration mismatch.
+function mulberry32(seed) {
+  let a = seed;
+  return function () {
+    a |= 0;
+    a = a + 0x6d2b79f5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+const rand = mulberry32(42);
+const DOTS = Array.from({
+  length: 70
+}, () => ({
+  x: Math.round(rand() * 1000) / 10,
+  y: Math.round(rand() * 1000) / 10,
+  size: Math.round((1.2 + rand() * 2.2) * 10) / 10
+}));
 
 /**
- * A quiet scatter of small white dots behind the hero's typography — not
- * the hero's main visual (that's still the headline), just ambient
- * texture. Only animates `opacity` for the entrance (driven by Hero.tsx's
- * master timeline via `[data-dot]`) and only `y` for the continuous drift
- * started here — different properties, so the two never fight for
- * control of the same tween.
+ * A scatter of small burnt-orange dots behind the hero's typography — not
+ * the hero's main visual (that's still the headline), just ambient motion.
+ * Opacity is owned by Hero.jsx's entrance timeline (via `[data-dot]`);
+ * this component only ever animates `x`/`y` position for the continuous
+ * drift, so the two effects never fight for control of the same tween.
  */
 const HeroDots = forwardRef(function HeroDots(_props, ref) {
   const innerRef = useRef(null);
@@ -127,9 +42,10 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
     const ctx = gsap.context(() => {
       dots.forEach((dot, index) => {
         gsap.to(dot, {
-          y: index % 2 === 0 ? -10 : 10,
-          duration: 5 + index % 4,
-          delay: index * 0.12,
+          y: index % 2 === 0 ? -(18 + index % 5 * 4) : 18 + index % 5 * 4,
+          x: index % 3 === 0 ? 10 : index % 3 === 1 ? -10 : 0,
+          duration: 4 + index % 5,
+          delay: index * 0.07,
           ease: "sine.inOut",
           repeat: -1,
           yoyo: true
