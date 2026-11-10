@@ -11,7 +11,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/Suyash-Hospital-Logo-Dark-size.jpg",
+  image: "/images/clients/suyash-hospital-logo.png",
   isDemoContent: true
 }, {
   id: "point-matrix",
@@ -19,7 +19,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/point-matrix-size.jpg",
+  image: "/images/clients/pointmatrix.png",
   isDemoContent: true
 }, {
   id: "vedant-hospital",
@@ -27,7 +27,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/vedant-size.jpg",
+  image: "/images/clients/vendat.png",
   isDemoContent: true
 }, {
   id: "national-college",
@@ -35,7 +35,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/national-collage-size.jpg",
+  image: "/images/clients/natinal.png",
   isDemoContent: true
 },
 {
@@ -44,7 +44,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/pimprikar-hospital-size.jpg",
+  image: "/images/clients/pimprikar.png",
   isDemoContent: true
 }, {
   id: "majhli-restorent",
@@ -68,7 +68,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/cantolment-size.jpg",
+  image: "/images/clients/cantolments.png",
   isDemoContent: true
 }, {
   id: "usha-hospital",
