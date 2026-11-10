@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   HASHTECH SOLUTIONS — DESIGN SYSTEM TOKENS
+   Premium IT infrastructure & security brand language.
+   Warm off-white/paper surfaces, burnt-orange accent used strategically,
+   with a deliberate dark graphite panel (--color-ink-soft) reserved for
+   the Footer and closing-CTA moments as the one dark contrast point.
+   ========================================================================== */
+
+@theme inline {
+  /* ---- Typography ---- */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* ---- Core surfaces (light, default canvas) ---- */
+  --color-ink: #fafaf8;              /* main background — warm off-white */
+  --color-ink-soft: #111214;         /* deliberate dark panel — Footer + closing CTAs only */
+  --color-surface: #ffffff;          /* primary card / panel surface */
+  --color-surface-raised: #f4f1ec;   /* elevated panel */
+  --color-surface-hover: #eceae4;
+  --color-line: rgba(17, 18, 20, 0.08);
+  --color-line-strong: rgba(17, 18, 20, 0.16);
+
+  /* ---- Editorial surface (section contrast breaks, stays light) ---- */
+  --color-paper: #ffffff;
+  --color-paper-dim: #f1efe9;
+  --color-paper-line: rgba(17, 18, 20, 0.08);
+
+  /* ---- Text (dark, for the light surfaces above) ---- */
+  --color-fg: #111214;
+  --color-fg-muted: #6b6b6b;
+  --color-fg-subtle: #9a9a9a;
+  --color-ink-fg: #111214;
+  --color-ink-fg-muted: #6b6b6b;
+
+  /* ---- Light text, reserved for the dark panels (--color-ink-soft) ---- */
+  --color-fg-on-dark: #f4f1ec;
+  --color-fg-on-dark-muted: #b9b6af;
+  --color-fg-on-dark-subtle: #8f8b83;
+  --color-line-on-dark: rgba(244, 241, 236, 0.14);
+
+  /* ---- Brand accents: burnt orange, used strategically ---- */
+  --color-primary: #f36b35;
+  --color-primary-dim: #d4551f;
+  --color-primary-bright: #ff874f;
+  --color-accent: #f36b35;
+  --color-accent-dim: #d4551f;
+  --color-signal: #ff874f;           /* warm conversion accent, used sparingly */
+  --color-signal-dim: #d4551f;
+  --color-danger: #ef4458;
+
+  /* ---- Radius ---- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.25rem;
+
+  /* ---- Shadows / glow ---- */
+  --shadow-elevated: 0 24px 60px -24px rgba(5, 7, 13, 0.65);
+  --shadow-glow-primary: 0 0 0 1px rgba(47, 99, 224, 0.4), 0 20px 50px -12px rgba(47, 99, 224, 0.35);
+  --shadow-glow-accent: 0 0 0 1px rgba(55, 230, 196, 0.35), 0 20px 50px -12px rgba(55, 230, 196, 0.3);
+
+  /* ---- Layout rhythm ---- */
+  --container-max: 90rem;
+}
+
+/* prefers-color-scheme intentionally unused: the brand commits to one
+   premium light-first palette with a deliberate dark panel (Footer,
+   closing CTAs) as a fixed design decision, not a light/dark theme toggle. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  background: var(--color-ink);
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Lenis smooth-scroll housekeeping */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Used once, for the contact form's success/error message appearing —
+   plain CSS so it's automatically neutralized by the reduced-motion
+   block above, with no JS gating needed. */
+@keyframes status-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-status-in {
+  animation: status-in 0.3s ease-out;
+}
