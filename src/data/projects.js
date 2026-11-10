@@ -11,7 +11,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/Suyash-Hospital-Logo-Dark.webp",
   isDemoContent: true
 }, {
   id: "point-matrix",
@@ -19,7 +19,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/point-matrix.png",
   isDemoContent: true
 }, {
   id: "vedant-hospital",
@@ -27,7 +27,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/vedant.webp",
   isDemoContent: true
 }, {
   id: "national-college",
@@ -35,7 +35,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/national-collage.jpg",
   isDemoContent: true
 }, {
   id: "majhli-restorent",
@@ -43,7 +43,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/majhli-restorent.webp",
   isDemoContent: true
 }, {
   id: "sant-krupa-hospital",
@@ -51,7 +51,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/sant-krupa-hospital.webp",
   isDemoContent: true
 }, {
   id: "sunil-dhapavkar-lattring",
@@ -59,7 +59,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/sunil-dhapavkar-lattring.webp",
   isDemoContent: true
 }, {
   id: "pimprikar-hospital",
@@ -67,15 +67,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
-  isDemoContent: true
-}, {
-  id: "suprim-equipments",
-  title: "Suprim Equipments",
-  category: "",
-  description: "",
-  details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/pimprikar-hospital.jpg",
   isDemoContent: true
 }, {
   id: "usha-hospital",
@@ -83,6 +75,6 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: PLACEHOLDER_IMAGE,
+  image: "/images/clients/usha-hospital.webp",
   isDemoContent: true
 }];
