@@ -14,7 +14,7 @@ export default function EnquiryCta({
   ctaLabel = "Get a Quote",
   ctaHref = "/contact"
 }) {
-  return <Section tone="contrast" border={false} className="bg-[radial-gradient(circle_at_50%_0%,rgba(255,135,79,0.14),transparent_60%)]">
+  return <Section tone="contrast" border={false} className="bg-[radial-gradient(circle_at_50%_0%,rgba(217,119,6,0.14),transparent_60%)]">
       <div className="flex flex-col items-center gap-6 text-center">
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-signal">{eyebrow}</span>
         <h2 className="max-w-2xl font-display text-3xl font-medium leading-tight text-fg-on-dark sm:text-4xl">

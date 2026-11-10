@@ -26,7 +26,7 @@ const DOTS = Array.from({
 }));
 
 /**
- * A scatter of small burnt-orange dots behind the hero's typography — not
+ * A scatter of small signal-amber dots behind the hero's typography — not
  * the hero's main visual (that's still the headline), just ambient motion.
  * Opacity is owned by Hero.jsx's entrance timeline (via `[data-dot]`);
  * this component only ever animates `x`/`y` position for the continuous
@@ -64,7 +64,7 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
       width: dot.size * 1.6,
       height: dot.size * 1.6,
       opacity: 0.6,
-      boxShadow: "0 0 8px 1.5px rgba(243,107,53,0.5)"
+      boxShadow: "0 0 8px 1.5px rgba(180,83,9,0.5)"
     }} />)}
     </div>;
 });
