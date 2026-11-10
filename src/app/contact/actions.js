@@ -1,7 +1,23 @@
 "use server";
 
+import nodemailer from "nodemailer";
 import { env } from "@/lib/env";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+let cachedTransporter = null;
+
+function getTransporter() {
+  if (!cachedTransporter) {
+    cachedTransporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: env.gmailUser,
+        pass: env.gmailAppPassword
+      }
+    });
+  }
+  return cachedTransporter;
+}
 
 // Mirrors the client-side maxLength attributes — those are a UX nicety,
 // not a security boundary, since any direct POST can skip the browser
@@ -15,11 +31,11 @@ const MAX_LENGTHS = {
 };
 
 /**
- * Validates and (once a real provider is configured) would deliver the
- * enquiry. Never reports success without a working delivery path — see
- * CONTACT_EMAIL_API_KEY in .env.example. Until that's set, a genuine,
- * well-formed submission still gets an honest error pointing people to
- * call or WhatsApp directly, rather than a fake "message sent".
+ * Validates and delivers the enquiry via Gmail SMTP. Never reports success
+ * without a working delivery path — see GMAIL_USER / GMAIL_APP_PASSWORD in
+ * .env.example. Until those are set, a genuine, well-formed submission still
+ * gets an honest error pointing people to call or WhatsApp directly, rather
+ * than a fake "message sent".
  */
 export async function submitEnquiry(_prevState, formData) {
   // Honeypot — real users never fill this in; bots that auto-fill every
@@ -53,15 +69,36 @@ export async function submitEnquiry(_prevState, formData) {
       message: "Please enter a valid email address."
     };
   }
-  if (!env.contactEmailApiKey) {
+  if (!env.gmailUser || !env.gmailAppPassword) {
     return {
       status: "error",
       message: "This form isn't connected to an email service yet. Please call or WhatsApp us directly using the details on this page."
     };
   }
 
-  // Real delivery (e.g. via Resend/SendGrid) runs here once
-  // CONTACT_EMAIL_API_KEY is configured.
+  try {
+    await getTransporter().sendMail({
+      from: `"HashTech Website" <${env.gmailUser}>`,
+      to: env.contactEmailTo,
+      replyTo: email,
+      subject: `New enquiry from ${name}${company ? ` (${company})` : ""}`,
+      text: [`Name: ${name}`, `Company: ${company || "-"}`, `Email: ${email}`, `Phone: ${phone}`, "", "Message:", message].join("\n"),
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Company:</strong> ${company || "-"}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
+      `
+    });
+  } catch {
+    return {
+      status: "error",
+      message: "We couldn't send your message right now. Please call or WhatsApp us directly using the details on this page."
+    };
+  }
+
   return {
     status: "success",
     message: "Thanks — we'll be in touch shortly."

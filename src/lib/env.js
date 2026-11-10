@@ -9,6 +9,7 @@ export const env = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? company.domain,
   recaptchaSiteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "",
   recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY ?? "",
-  contactEmailApiKey: process.env.CONTACT_EMAIL_API_KEY ?? "",
+  gmailUser: process.env.GMAIL_USER ?? "",
+  gmailAppPassword: process.env.GMAIL_APP_PASSWORD ?? "",
   contactEmailTo: process.env.CONTACT_EMAIL_TO ?? company.email
 };
