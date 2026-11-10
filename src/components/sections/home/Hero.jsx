@@ -164,46 +164,46 @@ export default function Hero() {
     };
   }, [reducedMotion]);
   return <section ref={sectionRef} className="relative flex flex-col justify-center overflow-hidden py-20 sm:min-h-[92vh] sm:py-28 md:min-h-screen">
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(243,107,53,0.1),transparent_60%)]" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.3] bg-[linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] bg-size-[64px_64px] mask-[linear-gradient(to_bottom,black,transparent_75%)]" />
-      <HeroDots ref={dotsRef} />
+    <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(243,107,53,0.1),transparent_60%)]" />
+    <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.3] bg-[linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] bg-size-[64px_64px] mask-[linear-gradient(to_bottom,black,transparent_75%)]" />
+    <HeroDots ref={dotsRef} />
 
-      <Container className="relative flex flex-col gap-6 sm:gap-10">
-        <span ref={eyebrowRef} className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-          IT Hardware · Networking · CCTV · AMC · Software
-        </span>
+    <Container className="relative flex flex-col gap-6 sm:gap-10">
+      <span ref={eyebrowRef} className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+        IT Hardware · Networking · CCTV · AMC · Software
+      </span>
 
-        <h1 ref={headlineRef} className="max-w-5xl font-display text-[clamp(2.75rem,8vw,6.5rem)] font-semibold leading-[0.98] tracking-tight text-fg">
-          Powering Your Business <span className="text-primary-bright">with Smarter</span> IT Solutions.
-        </h1>
+      <h1 ref={headlineRef} className="max-w-5xl font-display text-[clamp(2.75rem,8vw,6.5rem)] font-semibold leading-[0.98] tracking-tight text-black">
+        Powering Your Business <span className="text-primary-bright">with Smarter</span> IT Solutions.
+      </h1>
 
-        <div ref={ruleRef} className="h-px w-full max-w-md bg-linear-to-r from-accent via-primary-bright to-transparent" />
+      <div ref={ruleRef} className="h-px w-full max-w-md bg-linear-to-r from-accent via-primary-bright to-transparent" />
 
-        <div ref={subRowRef} className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <p className="max-w-lg text-lg leading-relaxed text-fg-muted">
-            From computer systems and IT infrastructure to advanced networking,
-            CCTV security and ongoing maintenance, we deliver technology
-            solutions that keep your business connected, secure and running.
-          </p>
+      <div ref={subRowRef} className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <p className="max-w-lg text-lg leading-relaxed text-fg-muted">
+          From computer systems and IT infrastructure to advanced networking,
+          CCTV security and ongoing maintenance, we deliver technology
+          solutions that keep your business connected, secure and running.
+        </p>
 
-          <div className="flex flex-wrap gap-4">
-            <MagneticButton>
-              <Button href="/services" variant="primary" size="lg" icon={<ArrowRight className="h-4 w-4" />}>
-                Explore Our Services
-              </Button>
-            </MagneticButton>
-            <Button href="/contact" variant="outline" size="lg">
-              Talk to Our Experts
+        <div className="flex flex-wrap gap-4">
+          <MagneticButton>
+            <Button href="/services" variant="primary" size="lg" icon={<ArrowRight className="h-4 w-4" />}>
+              Explore Our Services
             </Button>
-          </div>
+          </MagneticButton>
+          <Button href="/contact" variant="outline" size="lg">
+            Talk to Our Experts
+          </Button>
         </div>
+      </div>
 
-        <div ref={categoryRowRef} className="flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-6 font-mono text-xs uppercase tracking-widest text-fg-subtle">
-          {serviceCategories.map((category, index) => <Link key={category.slug} href={`/services#${category.slug}`} className="group inline-flex items-center gap-2 transition-colors hover:text-fg">
-              <span className="text-accent">{String.fromCharCode(65 + index)}</span>
-              {category.shortName}
-            </Link>)}
-        </div>
-      </Container>
-    </section>;
+      <div ref={categoryRowRef} className="flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-6 font-mono text-xs uppercase tracking-widest text-black">
+        {serviceCategories.map((category, index) => <Link key={category.slug} href={`/services#${category.slug}`} className="group inline-flex items-center gap-2 transition-colors hover:text-fg">
+          <span className="text-accent">{String.fromCharCode(65 + index)}</span>
+          {category.shortName}
+        </Link>)}
+      </div>
+    </Container>
+  </section>;
 }
