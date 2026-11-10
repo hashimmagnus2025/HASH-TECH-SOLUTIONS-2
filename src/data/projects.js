@@ -11,7 +11,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/Suyash-Hospital-Logo-Dark.webp",
+  image: "/images/clients/Suyash-Hospital-Logo-Dark-size.jpg",
   isDemoContent: true
 }, {
   id: "point-matrix",
@@ -19,7 +19,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/point-matrix.png",
+  image: "/images/clients/point-matrix-size.jpg",
   isDemoContent: true
 }, {
   id: "vedant-hospital",
@@ -27,7 +27,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/vedant.webp",
+  image: "/images/clients/vedant-size.jpg",
   isDemoContent: true
 }, {
   id: "national-college",
@@ -35,7 +35,16 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/national-collage.jpg",
+  image: "/images/clients/national-collage-size.jpg",
+  isDemoContent: true
+},
+{
+  id: "pimprikar-hospital",
+  title: "Pimprikar Hospital",
+  category: "",
+  description: "",
+  details: [],
+  image: "/images/clients/pimprikar-hospital-size.jpg",
   isDemoContent: true
 }, {
   id: "majhli-restorent",
@@ -43,7 +52,7 @@ export const demoProjects = [{
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/majhli-restorent.webp",
+  image: "/images/clients/mahjali-size.jpg",
   isDemoContent: true
 }, {
   id: "sant-krupa-hospital",
@@ -54,20 +63,12 @@ export const demoProjects = [{
   image: "/images/clients/sant-krupa-hospital.webp",
   isDemoContent: true
 }, {
-  id: "sunil-dhapavkar-lattring",
-  title: "Sunil Dhapavkar Lattring",
+  id: "cantolment",
+  title: "cantolment",
   category: "",
   description: "",
   details: [],
-  image: "/images/clients/sunil-dhapavkar-lattring.webp",
-  isDemoContent: true
-}, {
-  id: "pimprikar-hospital",
-  title: "Pimprikar Hospital",
-  category: "",
-  description: "",
-  details: [],
-  image: "/images/clients/pimprikar-hospital.jpg",
+  image: "/images/clients/cantolment-size.jpg",
   isDemoContent: true
 }, {
   id: "usha-hospital",

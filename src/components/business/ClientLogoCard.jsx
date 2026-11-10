@@ -14,11 +14,11 @@ import { ImageOff } from "lucide-react";
 export default function ClientLogoCard({ project }) {
   const [failed, setFailed] = useState(false);
   return <div className="flex flex-col items-center gap-4 rounded-2xl border border-line bg-surface p-6 transition-colors hover:border-accent/50">
-      <div className="relative flex h-20 w-full items-center justify-center">
+      <div className="relative flex h-32 w-full items-center justify-center">
         {failed ? <span className="flex flex-col items-center gap-1.5 text-fg-subtle">
-            <ImageOff className="h-5 w-5" aria-hidden />
+            <ImageOff className="h-7 w-7" aria-hidden />
             <span className="text-[0.65rem] uppercase tracking-widest">No Image</span>
-          </span> : <Image src={project.image} alt={project.title} fill sizes="200px" className="object-contain" onError={() => setFailed(true)} />}
+          </span> : <Image src={project.image} alt={project.title} fill sizes="280px" className="object-contain" onError={() => setFailed(true)} />}
       </div>
       <span className="text-center text-sm font-medium text-fg">{project.title}</span>
     </div>;

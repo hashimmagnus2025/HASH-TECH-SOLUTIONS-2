@@ -30,7 +30,7 @@ export default function ProjectsPage() {
               Projects
             </span>
           </Reveal>
-          <TextReveal as="h1" text="Our Clients" className="max-w-3xl font-display text-4xl font-medium leading-tight text-fg sm:text-5xl" />
+          <TextReveal as="h1" text="Our Respective Clients" className="max-w-3xl font-display text-4xl font-medium leading-tight text-fg sm:text-5xl" />
 
         </div>
 

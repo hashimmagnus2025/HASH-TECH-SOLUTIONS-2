@@ -24,7 +24,7 @@ export default function ClientLogoCarousel({ projects }) {
 
   return <div className="flex flex-col gap-4">
       <div ref={scrollRef} className="flex gap-5 overflow-x-auto pb-1 [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-        {projects.map(project => <div key={project.id} className="w-44 shrink-0 snap-start sm:w-52">
+        {projects.map(project => <div key={project.id} className="w-60 shrink-0 snap-start sm:w-72">
             <ClientLogoCard project={project} />
           </div>)}
       </div>
