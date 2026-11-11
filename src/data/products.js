@@ -1,4 +1,4 @@
-import { Monitor, Laptop, Cpu, Printer, Server, Router, Cctv, ShieldCheck, Mouse } from "lucide-react";
+import { Monitor, Laptop, Cpu, Printer, Server, Router, Cctv, ShieldCheck, Mouse, Projector, Presentation } from "lucide-react";
 export const productCategories = [{
   slug: "desktop-computers",
   name: "Desktop Computers",
@@ -19,6 +19,16 @@ export const productCategories = [{
   name: "Printers & Scanners",
   description: "Office printers, scanners and multifunction devices.",
   icon: Printer
+}, {
+  slug: "projectors",
+  name: "Projectors",
+  description: "Projectors for meeting rooms, classrooms and presentations.",
+  icon: Projector
+}, {
+  slug: "interactive-panels",
+  name: "Interactive Panels",
+  description: "Interactive touchscreen flat panels for classrooms and meeting rooms.",
+  icon: Presentation
 }, {
   slug: "servers",
   name: "Servers",
@@ -159,6 +169,18 @@ export const products = [{
   category: "computer-accessories",
   shortDescription: "Portable storage for backup and file transfer.",
   image: "/images/products/external-storage-drive.jpg"
+}, {
+  id: "p19",
+  name: "Business Projector",
+  category: "projectors",
+  shortDescription: "Full-HD projector for meeting rooms and presentations.",
+  image: "/images/products/business-projector.svg"
+}, {
+  id: "p20",
+  name: "Interactive Flat Panel",
+  category: "interactive-panels",
+  shortDescription: "Touchscreen interactive panel for classrooms and meeting rooms.",
+  image: "/images/products/interactive-panel.svg"
 }];
 export function getProductsByCategory(category) {
   return products.filter(product => product.category === category);

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Business projector">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2230"/>
+      <stop offset="1" stop-color="#0f141d"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f9"/>
+      <stop offset="1" stop-color="#cdd4de"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fd0ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7fd0ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lens" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#bfe7ff"/>
+      <stop offset="0.55" stop-color="#4a9fd4"/>
+      <stop offset="1" stop-color="#1c3a4e"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- projected light beam -->
+  <path d="M250 300 L140 210 L140 390 Z" fill="url(#beam)"/>
+
+  <!-- soft shadow -->
+  <ellipse cx="470" cy="430" rx="210" ry="26" fill="#000000" opacity="0.28"/>
+
+  <!-- projector body -->
+  <rect x="270" y="250" width="360" height="150" rx="26" fill="url(#body)"/>
+  <rect x="270" y="250" width="360" height="150" rx="26" fill="none" stroke="#9aa5b3" stroke-width="2"/>
+
+  <!-- top vent lines -->
+  <g stroke="#b7c0cc" stroke-width="4" stroke-linecap="round">
+    <line x1="430" y1="275" x2="600" y2="275"/>
+    <line x1="430" y1="289" x2="600" y2="289"/>
+    <line x1="430" y1="303" x2="600" y2="303"/>
+  </g>
+
+  <!-- control buttons -->
+  <circle cx="455" cy="360" r="9" fill="#8b98a7"/>
+  <circle cx="488" cy="360" r="9" fill="#8b98a7"/>
+  <circle cx="595" cy="360" r="10" fill="#2fb27a"/>
+
+  <!-- lens housing -->
+  <circle cx="270" cy="325" r="62" fill="#e3e8ee" stroke="#9aa5b3" stroke-width="2"/>
+  <circle cx="252" cy="325" r="46" fill="#2b333f"/>
+  <circle cx="252" cy="325" r="36" fill="url(#lens)"/>
+  <circle cx="240" cy="312" r="10" fill="#ffffff" opacity="0.7"/>
+
+  <!-- feet -->
+  <rect x="320" y="400" width="34" height="20" rx="5" fill="#aab3bf"/>
+  <rect x="546" y="400" width="34" height="20" rx="5" fill="#aab3bf"/>
+</svg>
