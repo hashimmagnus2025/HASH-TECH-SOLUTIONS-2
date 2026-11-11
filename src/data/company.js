@@ -43,6 +43,6 @@ export const company = {
     linkedin: "",
     twitter: ""
   },
-  // PLACEHOLDER — replace with the confirmed production domain.
-  domain: "https://www.hashtechsolutions.example"
+  // Confirmed production domain (live on Vercel).
+  domain: "https://www.hashtechz.com"
 };
