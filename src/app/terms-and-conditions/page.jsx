@@ -7,8 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Terms & Conditions",
   description: `Terms and conditions for ${company.name}.`,
-  path: "/terms-and-conditions",
-  noIndex: true
+  path: "/terms-and-conditions"
 });
 export default function TermsPage() {
   return <section className="py-16">

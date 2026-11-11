@@ -7,8 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Privacy Policy",
   description: `Privacy policy for ${company.name}.`,
-  path: "/privacy-policy",
-  noIndex: true
+  path: "/privacy-policy"
 });
 export default function PrivacyPolicyPage() {
   return <section className="py-16">

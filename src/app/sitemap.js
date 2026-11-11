@@ -1,11 +1,7 @@
 import { env } from "@/lib/env";
 import { services } from "@/data/services";
 
-// Legal pages are intentionally excluded — they're marked `noindex` in
-// their metadata (see lib/seo.ts buildMetadata noIndex), and listing a
-// noindex page in the sitemap just wastes crawl budget / sends a mixed
-// signal to search engines.
-const staticRoutes = ["", "/about", "/services", "/products", "/amc-services", "/industries", "/projects", "/contact"];
+const staticRoutes = ["", "/about", "/services", "/products", "/amc-services", "/industries", "/projects", "/contact", "/privacy-policy", "/terms-and-conditions"];
 export default function sitemap() {
   const base = env.siteUrl.replace(/\/$/, "");
   const staticEntries = staticRoutes.map(route => ({
