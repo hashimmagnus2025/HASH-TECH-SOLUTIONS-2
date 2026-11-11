@@ -24,6 +24,8 @@ use, no attribution required — credited here anyway for provenance).
 | `video-door-phone-kit.jpg` | Video Door Phone Kit (p16) | [pexels.com/photo/9461758](https://www.pexels.com/photo/man-in-black-long-sleeve-shirt-pressing-a-button-on-intercom-9461758/) | Mike Jones |
 | `wireless-keyboard-mouse-set.jpg` | Wireless Keyboard & Mouse Set (p17) | [pexels.com/photo/33490579](https://www.pexels.com/photo/wireless-keyboard-and-mouse-on-yellow-surface-33490579/) | Andrey Matveev |
 | `external-storage-drive.jpg` | External Storage Drive (p18) | [pexels.com/photo/30070239](https://www.pexels.com/photo/external-hard-drive-with-orange-protective-casing-30070239/) | Amar Preciado |
+| `interactive-panel.jpg` | Interactive Flat Panel (p20) | [pexels.com/photo/7743260](https://www.pexels.com/photo/two-students-using-an-interactive-board-7743260/) | Alena Darmel |
+| `interactive-whiteboard.jpg` | Interactive Whiteboard (p21) | [pexels.com/photo/7743253](https://www.pexels.com/photo/two-kids-standing-by-an-interactive-board-7743253/) | Alena Darmel |
 
 **Known tradeoff, flagged honestly:** these are real photos of real
 products/scenes, not confirmed HashTech inventory photography — some show

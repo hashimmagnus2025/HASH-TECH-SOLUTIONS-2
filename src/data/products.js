@@ -180,7 +180,13 @@ export const products = [{
   name: "Interactive Flat Panel",
   category: "interactive-panels",
   shortDescription: "Touchscreen interactive panel for classrooms and meeting rooms.",
-  image: "/images/products/interactive-panel.svg"
+  image: "/images/products/interactive-panel.jpg"
+}, {
+  id: "p21",
+  name: "Interactive Whiteboard",
+  category: "interactive-panels",
+  shortDescription: "Touch-enabled interactive whiteboard for teaching and collaboration.",
+  image: "/images/products/interactive-whiteboard.jpg"
 }];
 export function getProductsByCategory(category) {
   return products.filter(product => product.category === category);
