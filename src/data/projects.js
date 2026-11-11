@@ -47,8 +47,8 @@ export const demoProjects = [{
   image: "/images/clients/pimprikar.png",
   isDemoContent: true
 }, {
-  id: "majhli-restorent",
-  title: "Majhli Restorent",
+  id: "majhali-restorent",
+  title: "majhali Restorent",
   category: "",
   description: "",
   details: [],
@@ -62,15 +62,7 @@ export const demoProjects = [{
   details: [],
   image: "/images/clients/sant-krupa-hospital.webp",
   isDemoContent: true
-}, {
-  id: "cantolment",
-  title: "cantolment",
-  category: "",
-  description: "",
-  details: [],
-  image: "/images/clients/cantolments.png",
-  isDemoContent: true
-}, {
+},  {
   id: "usha-hospital",
   title: "Usha Hospital",
   category: "",

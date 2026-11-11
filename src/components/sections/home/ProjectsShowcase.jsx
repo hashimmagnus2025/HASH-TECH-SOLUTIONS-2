@@ -7,7 +7,7 @@ export default function ProjectsShowcase() {
   return <Section tone="raised" id="projects">
       <div className="flex flex-col gap-12">
         <Reveal>
-          <SectionHeading eyebrow="Projects" title="Our Respective Clients" description="Layout preview using clearly labeled demo content — real project case studies replace these once available." />
+          <SectionHeading eyebrow="Projects" title="Our Clients" description="Layout preview using clearly labeled demo content — real project case studies replace these once available." />
         </Reveal>
 
         <ClientLogoCarousel projects={demoProjects} />

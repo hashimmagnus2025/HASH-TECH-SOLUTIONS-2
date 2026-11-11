@@ -27,7 +27,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 export const metadata = {
   metadataBase: new URL(env.siteUrl),
-  ...buildMetadata()
+  ...buildMetadata(),
+  verification: {
+    google: "RmLhR3HrQvZXF7LNqxRZtP9IPNfYGNRtu3530QAQZXQ"
+  }
 };
 export default function RootLayout({
   children
