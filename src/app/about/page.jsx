@@ -12,7 +12,7 @@ import { company } from "@/data/company";
 import { values, capabilities } from "@/data/about";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "About Us",
+  title: "About Us — IT & Security Experts in Nashik",
   description: "HashTech Solutions provides IT hardware, networking, CCTV & security, AMC and software solutions as a single accountable technology partner.",
   path: "/about"
 });

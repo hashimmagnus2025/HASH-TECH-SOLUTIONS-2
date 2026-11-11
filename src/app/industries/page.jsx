@@ -9,7 +9,7 @@ import EnquiryCta from "@/components/business/EnquiryCta";
 import { industries } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "Industries We Serve",
+  title: "Industries We Serve — Offices, Schools, Healthcare & More",
   description: "IT, networking, CCTV and AMC solutions shaped around corporate offices, SMEs, schools, healthcare, manufacturing, retail, government and individual customers.",
   path: "/industries"
 });

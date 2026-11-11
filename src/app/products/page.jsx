@@ -11,7 +11,7 @@ import ProductCard from "@/components/business/ProductCard";
 import { productCategories, getProductsByCategory } from "@/data/products";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "Products",
+  title: "IT Products — Computers, CCTV & Networking",
   description: "A product catalogue and enquiry experience covering computers, laptops, workstations, servers, networking equipment, CCTV cameras, security equipment and computer accessories.",
   path: "/products"
 });

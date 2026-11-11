@@ -10,7 +10,7 @@ import EnquiryCta from "@/components/business/EnquiryCta";
 import { demoProjects } from "@/data/projects";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "Projects",
+  title: "Projects & Case Studies",
   description: "A preview of the HashTech Solutions projects/case-studies layout using clearly labeled demo content, pending real case studies.",
   path: "/projects"
 });

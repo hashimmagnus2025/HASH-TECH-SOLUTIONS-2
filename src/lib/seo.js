@@ -1,6 +1,6 @@
 import { company } from "@/data/company";
 import { env } from "@/lib/env";
-const defaultTitle = `${company.name} — IT Hardware, Networking, CCTV & AMC Services`;
+const defaultTitle = `${company.name} — IT, Networking, CCTV & AMC Services in Nashik`;
 
 /**
  * Builds consistent per-route metadata (title, description, canonical,

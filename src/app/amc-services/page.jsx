@@ -12,7 +12,7 @@ import EnquiryCta from "@/components/business/EnquiryCta";
 import { getServicesByCategory } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "AMC & Maintenance Services",
+  title: "AMC & Maintenance Contracts — Computers, CCTV & Networking",
   description: "Annual Maintenance Contracts covering computers, IT infrastructure, CCTV, networking, servers and firewalls — scheduled maintenance instead of reactive-only support.",
   path: "/amc-services"
 });

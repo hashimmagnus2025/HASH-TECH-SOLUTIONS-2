@@ -9,7 +9,7 @@ import { serviceCategories } from "@/data/service-categories";
 import { getServicesByCategory, services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
-  title: "Services",
+  title: "IT, Networking, CCTV & AMC Services",
   description: "All 42 HashTech Solutions services across computer sales, IT hardware & networking, CCTV & security, AMC & maintenance, and software & IT solutions.",
   path: "/services"
 });
