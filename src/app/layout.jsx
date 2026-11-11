@@ -5,6 +5,7 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import SmoothScrollProvider from "@/components/animations/SmoothScrollProvider";
 import ScrollProgressIndicator from "@/components/animations/ScrollProgressIndicator";
 import CursorGlow from "@/components/animations/CursorGlow";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { buildMetadata } from "@/lib/seo";
 import { env } from "@/lib/env";
 import { toJsonLdScript } from "@/lib/jsonLd";
@@ -56,6 +57,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
         </SmoothScrollProvider>
+        {env.gaId ? <GoogleAnalytics gaId={env.gaId} /> : null}
       </body>
     </html>;
 }

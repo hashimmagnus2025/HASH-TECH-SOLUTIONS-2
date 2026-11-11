@@ -11,5 +11,6 @@ export const env = {
   recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY ?? "",
   gmailUser: process.env.GMAIL_USER ?? "",
   gmailAppPassword: process.env.GMAIL_APP_PASSWORD ?? "",
-  contactEmailTo: process.env.CONTACT_EMAIL_TO ?? company.email
+  contactEmailTo: process.env.CONTACT_EMAIL_TO ?? company.email,
+  gaId: process.env.NEXT_PUBLIC_GA_ID ?? ""
 };
