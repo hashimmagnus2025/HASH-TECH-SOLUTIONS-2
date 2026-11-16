@@ -5,7 +5,7 @@ import StaggerGroup from "@/components/animations/StaggerGroup";
 import ArrowButton from "@/components/ui/ArrowButton";
 import ProductCard from "@/components/business/ProductCard";
 import { products } from "@/data/products";
-const featuredProductIds = ["p1", "p3", "p9", "p11", "p13", "p7", "p17"];
+const featuredProductIds = ["p1", "p3", "p9", "p11", "p13", "p7", "p17", "p20"];
 export default function ProductsShowcase() {
   const featured = featuredProductIds.map(id => products.find(product => product.id === id)).filter(product => Boolean(product));
   return <Section tone="dark">

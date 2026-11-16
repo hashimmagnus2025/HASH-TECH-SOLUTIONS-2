@@ -12,5 +12,6 @@ export const env = {
   gmailUser: process.env.GMAIL_USER ?? "",
   gmailAppPassword: process.env.GMAIL_APP_PASSWORD ?? "",
   contactEmailTo: process.env.CONTACT_EMAIL_TO ?? company.email,
-  gaId: process.env.NEXT_PUBLIC_GA_ID ?? ""
+  gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ""
 };

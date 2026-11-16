@@ -56,9 +56,9 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
   }, [reducedMotion]);
   return <div ref={node => {
     innerRef.current = node;
-    if (typeof ref === "function") ref(node);else if (ref) ref.current = node;
+    if (typeof ref === "function") ref(node); else if (ref) ref.current = node;
   }} aria-hidden className="pointer-events-none absolute inset-0">
-      {DOTS.map((dot, index) => <span key={index} data-dot className="absolute rounded-full bg-accent" style={{
+    {DOTS.map((dot, index) => <span key={index} data-dot className="absolute rounded-full bg-accent" style={{
       left: `${dot.x}%`,
       top: `${dot.y}%`,
       width: dot.size * 1.6,
@@ -66,6 +66,6 @@ const HeroDots = forwardRef(function HeroDots(_props, ref) {
       opacity: 0.6,
       boxShadow: "0 0 8px 1.5px rgba(53,181,209,0.5)"
     }} />)}
-    </div>;
+  </div>;
 });
 export default HeroDots;
