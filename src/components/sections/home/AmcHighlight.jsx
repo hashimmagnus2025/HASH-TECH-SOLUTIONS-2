@@ -3,6 +3,7 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import IconBox from "@/components/ui/IconBox";
 import Reveal from "@/components/animations/Reveal";
+import AmcIllustration from "@/components/illustrations/AmcIllustration";
 const benefits = ["Scheduled servicing instead of reactive-only support", "Predictable, planned maintenance costs", "Covers computers, networking, CCTV, servers and firewalls", "A defined point of contact when something does go wrong"];
 export default function AmcHighlight() {
   return <Section tone="dark" id="amc-services">
@@ -30,6 +31,7 @@ export default function AmcHighlight() {
         </Reveal>
 
         <Reveal delay={0.1} className="flex flex-col justify-center gap-5 rounded-2xl bg-surface-raised p-8">
+          <AmcIllustration className="mx-auto w-full max-w-70" />
           <span className="font-mono text-xs uppercase tracking-[0.15em] text-fg-subtle">
             Request an AMC
           </span>

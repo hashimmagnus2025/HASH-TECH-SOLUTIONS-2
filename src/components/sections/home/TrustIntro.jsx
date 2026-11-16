@@ -2,6 +2,7 @@ import Section from "@/components/ui/Section";
 import Reveal from "@/components/animations/Reveal";
 import StaggerGroup from "@/components/animations/StaggerGroup";
 import StatBlock from "@/components/ui/StatBlock";
+import PartnerIllustration from "@/components/illustrations/PartnerIllustration";
 import { company } from "@/data/company";
 export default function TrustIntro() {
   return <Section tone="light" id="about">
@@ -13,6 +14,7 @@ export default function TrustIntro() {
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-ink-fg sm:text-4xl">
             {company.tagline}
           </h2>
+          <PartnerIllustration className="mt-8 hidden w-full rounded-2xl border border-paper-line lg:block" />
         </Reveal>
 
         <div className="flex flex-col gap-8">

@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import MagneticButton from "@/components/animations/MagneticButton";
 import HeroDots from "@/components/sections/home/HeroDots";
+import HeroBlueprint from "@/components/sections/home/HeroBlueprint";
 import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { serviceCategories } from "@/data/service-categories";
@@ -166,6 +167,7 @@ export default function Hero() {
   return <section ref={sectionRef} className="relative flex flex-col justify-center overflow-hidden py-20 sm:min-h-[92vh] sm:py-28 md:min-h-screen">
     <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(53,181,209,0.08),transparent_60%)]" />
     <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.3] bg-[linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] bg-size-[64px_64px] mask-[linear-gradient(to_bottom,black,transparent_75%)]" />
+    <HeroBlueprint />
     <HeroDots ref={dotsRef} />
 
     <Container className="relative flex flex-col gap-6 sm:gap-10">
